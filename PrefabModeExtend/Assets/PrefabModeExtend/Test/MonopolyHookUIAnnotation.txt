@@ -1,2 +1,0 @@
----class: MonopolyHookUIAnnotation
----@Field cc LuaUI
