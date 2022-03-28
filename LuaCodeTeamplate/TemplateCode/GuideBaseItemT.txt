@@ -1,0 +1,5 @@
+
+
+local #LuaClassName# = Class({})
+
+return #LuaClassName#
