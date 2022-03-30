@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff6c12dc8dd50045bc84482d69534cc, type: 3}
   m_Name: LuaCodeTemplate
   m_EditorClassIdentifier: 
+  templatePath: {fileID: 102900000, guid: d72fb601b20d9e341a0ae1bd7bb871bf, type: 3}
+  exports:
+  - go: {fileID: 4900000, guid: de402f91a25b9fb44a484cdd3417e2e6, type: 3}
+    outputPath: {fileID: 102900000, guid: d72fb601b20d9e341a0ae1bd7bb871bf, type: 3}
