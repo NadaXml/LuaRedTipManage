@@ -1,0 +1,20 @@
+---------------------------
+
+-- begin auto genre lang mat
+Lang.matMap = {
+    [LangEnum.TR] = {
+        ["Source1"] = "SourceSUM1",
+        ["Source2"] = "SourceSUM2"
+    },
+    [LangEnum.JP] = {
+        ["Source1"] = "SourceWuLaLa1",
+        ["Source2"] = "SourceWuLaLa2"
+    },
+    [LangEnum.TH] = {
+        ["Source1"] = "SourceSUM1",
+        ["Source2"] = "SourceSUM2"
+    }
+}
+--end auto
+
+-------------------------------

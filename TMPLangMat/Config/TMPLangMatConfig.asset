@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cf2f573e8dee645bd3b81130b6d180, type: 3}
+  m_Name: TMPLangMatConfig
+  m_EditorClassIdentifier: 
+  mats:
+  - langKey: TR
+    matList: {fileID: 11400000, guid: 480862ebfc58a104980a5f0c6eb630ae, type: 2}
+  - langKey: JP
+    matList: {fileID: 11400000, guid: a0c1b398727e0034f8075dace2178bac, type: 2}
+  - langKey: TH
+    matList: {fileID: 11400000, guid: 480862ebfc58a104980a5f0c6eb630ae, type: 2}
