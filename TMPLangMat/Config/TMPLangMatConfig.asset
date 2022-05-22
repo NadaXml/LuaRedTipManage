@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6cf2f573e8dee645bd3b81130b6d180, type: 3}
+  m_Script: {fileID: 11500000, guid: 85716137131de724788a6ce09fcbab6c, type: 3}
   m_Name: TMPLangMatConfig
   m_EditorClassIdentifier: 
   mats:
   - langKey: TR
-    matList: {fileID: 11400000, guid: 480862ebfc58a104980a5f0c6eb630ae, type: 2}
+    matList: {fileID: 0}
   - langKey: JP
-    matList: {fileID: 11400000, guid: a0c1b398727e0034f8075dace2178bac, type: 2}
+    matList: {fileID: 0}
   - langKey: TH
-    matList: {fileID: 11400000, guid: 480862ebfc58a104980a5f0c6eb630ae, type: 2}
+    matList: {fileID: 0}

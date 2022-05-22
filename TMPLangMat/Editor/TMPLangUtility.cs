@@ -5,6 +5,9 @@ using System;
 
 namespace TMPLang
 {
+    /// <summary>
+    /// Editor下的工具方法
+    /// </summary>
     public class TMPLangUtility
     {
         public delegate T createT<out T>(string key);

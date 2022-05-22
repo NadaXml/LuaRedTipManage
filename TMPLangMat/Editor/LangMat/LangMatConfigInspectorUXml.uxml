@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Label text="please editor" name="Title">
+        <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMatConfigInspectorUSS.uss" />
+    </ui:Label>
+    <ui:IMGUIContainer name="IMGUIContainer1" style="height: 402px; background-color: rgba(103, 103, 103, 255);">
+        <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMatConfigInspectorUSS.uss" />
+    </ui:IMGUIContainer>
+    <ui:Button text="Save" name="BtnSave">
+        <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMatConfigInspectorUSS.uss" />
+    </ui:Button>
+</ui:UXML>

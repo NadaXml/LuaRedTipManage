@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UIElements;
 
 namespace TMPLang
 {
@@ -10,6 +11,13 @@ namespace TMPLang
     {
         private const float Space_Height = 2;
         private const float R_Offset = 10;
+
+
+        public override VisualElement CreatePropertyGUI(SerializedProperty property)
+        {
+            //return base.CreatePropertyGUI(property);
+        }
+
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
             SerializedProperty langKeyProp = property.FindPropertyRelative("langKey");

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
 using System.IO;
+using UnityEngine.UIElements;
+using UnityEditor.UIElements;
 
 namespace TMPLang
 {
@@ -80,68 +82,57 @@ namespace TMPLang
             };
         }
 
-        public override void OnInspectorGUI()
+        public void OnDrawRecordedListGUI()
         {
             EditorGUILayout.Space();
             serializedObject.Update();
             d.DoLayoutList();
             serializedObject.ApplyModifiedProperties();
-
-            if (GUILayout.Button("保存配置"))
-            {
-                string finalStr = exporter.GetLuaConfigStr(config);
-                Debug.Log(finalStr);
-
-                string testFilePath = Path.Combine(Application.dataPath, "TMPLangMat/Test/testSourceLua.txt");
-                StreamReader sr = new StreamReader(testFilePath);
-                string testSourceCode = sr.ReadToEnd();
-                sr.Close();
-                string replaceStr = exporter.ReplaceForLuaFile(testSourceCode, finalStr);
-
-                Debug.Log(replaceStr);
-
-                StreamWriter sw = new StreamWriter(testFilePath);
-                sw.Write(replaceStr);
-                sw.Close();
-
-            }
         }
 
-        //public void FillList()
+        public void SaveConfig()
+        {
+            string finalStr = exporter.GetLuaConfigStr(config);
+            Debug.Log(finalStr);
+
+            string testFilePath = Path.Combine(Application.dataPath, "TMPLangMat/Test/testSourceLua.txt");
+            StreamReader sr = new StreamReader(testFilePath);
+            string testSourceCode = sr.ReadToEnd();
+            sr.Close();
+            string replaceStr = exporter.ReplaceForLuaFile(testSourceCode, finalStr);
+
+            Debug.Log(replaceStr);
+
+            StreamWriter sw = new StreamWriter(testFilePath);
+            sw.Write(replaceStr);
+            sw.Close();
+        }
+
+        //public override void OnInspectorGUI()
         //{
-        //    List<LangMatPreset> mats = config.mats;
-
-        //    int keyIndex = 0;
-        //    foreach (string key in Array_Keys)
-        //    {
-        //        int findIndex = mats.FindIndex((LangMatPreset v) =>
-        //        {
-        //            return string.Compare(v.langKey, key) == 0;
-        //        });
-
-        //        if (findIndex != -1)
-        //        {
-        //            if ( findIndex != keyIndex)
-        //            {
-        //                LangMatPreset temp = mats[findIndex];
-        //                mats[findIndex] = mats[keyIndex];
-        //                mats[keyIndex] = temp;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            LangMatPreset preset = new LangMatPreset();
-        //            preset.langKey = key;
-        //            mats.Insert(keyIndex, preset);
-        //        }
-        //        keyIndex++;
-        //    }
-
-        //    for( int i = mats.Count - 1; i >= Array_Keys.Length; i--)
-        //    {
-        //        mats.RemoveAt(i);
-        //    }
         //}
+
+
+        public override VisualElement CreateInspectorGUI()
+        {
+            VisualTreeAsset vAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/ThirdParty/TMPLangMat/Editor/LangMat/LangMatConfigInspectorUXml.uxml");
+            VisualElement elem = vAsset.CloneTree();
+            StyleSheet ss = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/ThirdParty/TMPLangMat/Editor/LangMat/LangMatConfigInspectorUSS.uss");
+            elem.styleSheets.Add(ss);
+
+            IMGUIContainer listIMGUI = elem.Q<IMGUIContainer>("IMGUIContainer1");
+            listIMGUI.onGUIHandler = ()=> {
+                OnDrawRecordedListGUI();
+            };
+
+            Button btnSave = elem.Q<Button>("BtnSave");
+            btnSave.clickable.clicked += () =>
+            {
+                SaveConfig();
+            };
+
+            return elem;
+        }
     }
 }
 

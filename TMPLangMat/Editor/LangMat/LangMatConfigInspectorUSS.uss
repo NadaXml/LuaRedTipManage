@@ -1,0 +1,7 @@
+.unity-label {
+    background-color: rgba(183, 0, 0, 255);
+}
+
+.unity-imgui-container {
+    background-color: rgba(0, 0, 0, 255);
+}

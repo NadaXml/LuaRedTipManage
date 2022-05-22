@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdf7de683ab480d4e8697db8b0bc465d, type: 3}
+  m_Script: {fileID: 11500000, guid: 023a3da916c0ea64fb2e380f56f702df, type: 3}
   m_Name: WuLaLa
   m_EditorClassIdentifier: 
-  matName:
-  - source: {fileID: 2100000, guid: e68d497f02e83534ca102b662edd67cb, type: 2}
-    replace: {fileID: 2100000, guid: aea785dcecde5c045ab35ec544cca0bc, type: 2}
-  - source: {fileID: 2100000, guid: 82655b8eb91027c4680e70f889a22755, type: 2}
-    replace: {fileID: 2100000, guid: dd9c482fe1e572343870a101c4aa9101, type: 2}
+  matName: []
