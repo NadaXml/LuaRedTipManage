@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UIElements;
+using UnityEditor.UIElements;
 
 namespace TMPLang
 {
@@ -15,7 +16,22 @@ namespace TMPLang
 
         public override VisualElement CreatePropertyGUI(SerializedProperty property)
         {
-            //return base.CreatePropertyGUI(property);
+            VisualElement elem = new VisualElement();
+            VisualTreeAsset asset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/ThirdParty/TMPLangMat/Editor/LangMat/LangMatPresetDrawerUXml.uxml");
+            asset.CloneTree(elem);
+            StyleSheet ss = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/ThirdParty/TMPLangMat/Editor/LangMat/LangMatPresetDrawerUSS.uss");
+            elem.styleSheets.Add(ss);
+
+            SerializedProperty langKeyProp = property.FindPropertyRelative("langKey");
+            Label langKey = elem.Q<Label>();
+            langKey.text = langKeyProp.stringValue;
+
+            SerializedProperty matListProp = property.FindPropertyRelative("matList");
+            ObjectField listPreset = elem.Q<ObjectField>();
+            listPreset.objectType = typeof(LangMatListPreset);
+            listPreset.BindProperty(matListProp);
+
+            return elem;
         }
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)

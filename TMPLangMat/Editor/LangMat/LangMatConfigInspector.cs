@@ -120,10 +120,26 @@ namespace TMPLang
             StyleSheet ss = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/ThirdParty/TMPLangMat/Editor/LangMat/LangMatConfigInspectorUSS.uss");
             elem.styleSheets.Add(ss);
 
-            IMGUIContainer listIMGUI = elem.Q<IMGUIContainer>("IMGUIContainer1");
-            listIMGUI.onGUIHandler = ()=> {
-                OnDrawRecordedListGUI();
-            };
+            ListView ls = elem.Q<ListView>("ListView1");
+            VisualElement makeItem()
+            {
+                PropertyField pf = new PropertyField();
+                return pf;
+            }
+
+            SerializedProperty listProp = serializedObject.FindProperty(Str_mats);
+
+            void bindItem(VisualElement e, int i)
+            {
+                PropertyField pf = e as PropertyField;
+                pf.BindProperty(listProp.GetArrayElementAtIndex(i));
+            }
+
+            ls.itemsSource = config.mats;
+            ls.makeItem = makeItem;
+            ls.bindItem = bindItem;
+            ls.itemHeight = (int)EditorGUI.GetPropertyHeight(listProp.GetArrayElementAtIndex(0));
+            ls.selectionType = SelectionType.Single;
 
             Button btnSave = elem.Q<Button>("BtnSave");
             btnSave.clickable.clicked += () =>

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mats:
   - langKey: TR
-    matList: {fileID: 0}
+    matList: {fileID: 11400000, guid: bed298383f996af49bd87827352fdac7, type: 2}
   - langKey: JP
     matList: {fileID: 0}
   - langKey: TH
