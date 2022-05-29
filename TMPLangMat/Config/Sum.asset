@@ -12,8 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023a3da916c0ea64fb2e380f56f702df, type: 3}
   m_Name: Sum
   m_EditorClassIdentifier: 
-  matName:
-  - source: {fileID: 0}
-    replace: {fileID: 0}
-  - source: {fileID: 0}
-    replace: {fileID: 0}
+  matName: []

@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <uie:PropertyField name="OriginAsset">
+        <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/TMPLangGlobalConfigUSS.uss" />
+    </uie:PropertyField>
+    <uie:PropertyField name="AllAsset">
+        <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/TMPLangGlobalConfigUSS.uss" />
+    </uie:PropertyField>
+    <uie:PropertyField name="SumList">
+        <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/TMPLangGlobalConfigUSS.uss" />
+    </uie:PropertyField>
+    <uie:PropertyField name="WllList">
+        <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/TMPLangGlobalConfigUSS.uss" />
+    </uie:PropertyField>
+    <uie:PropertyField name="BoldList">
+        <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/TMPLangGlobalConfigUSS.uss" />
+    </uie:PropertyField>
+    <ui:Button text="CreateMatPreset" name="CreatePreset">
+        <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/TMPLangGlobalConfigUSS.uss" />
+    </ui:Button>
+    <ui:ListView focusable="True" name="MatList" style="height: 92px;">
+        <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/TMPLangGlobalConfigUSS.uss" />
+    </ui:ListView>
+    <ui:Button text="DeletePreset" name="DeletePreset">
+        <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/TMPLangGlobalConfigUSS.uss" />
+    </ui:Button>
+</ui:UXML>

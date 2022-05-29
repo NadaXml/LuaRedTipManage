@@ -3,16 +3,16 @@
 -- begin auto genre lang mat
 Lang.matMap = {
     [LangEnum.TR] = {
-        ["Source1"] = "SourceSUM1",
-        ["Source2"] = "SourceSUM2"
+        ["WllBold1"] = "WllBold1",
+        ["WllBold1"] = "WllSukin1"
     },
     [LangEnum.JP] = {
-        ["Source1"] = "SourceWuLaLa1",
-        ["Source2"] = "SourceWuLaLa2"
+        ["WllBold1"] = "WllBold1",
+        ["WllBold1"] = "WllSukin1"
     },
     [LangEnum.TH] = {
-        ["Source1"] = "SourceSUM1",
-        ["Source2"] = "SourceSUM2"
+        ["WllBold1"] = "WllBold1",
+        ["WllBold1"] = "WllSum1"
     }
 }
 --end auto

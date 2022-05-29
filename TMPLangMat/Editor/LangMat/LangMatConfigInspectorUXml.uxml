@@ -1,11 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
-    <ui:Label text="Label" name="L1">
+    <ui:Label text="Material Preset Lang Mapping" name="L1">
         <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/LangMatConfigInspectorUSS.uss" />
     </ui:Label>
     <ui:ListView focusable="True" name="ListView1" style="height: 405px;">
         <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/LangMatConfigInspectorUSS.uss" />
     </ui:ListView>
-    <ui:Button text="Button" name="BtnSave">
+    <ui:Button text="SaveConfig" name="BtnSave">
         <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/LangMatConfigInspectorUSS.uss" />
     </ui:Button>
 </ui:UXML>

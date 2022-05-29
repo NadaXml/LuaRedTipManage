@@ -1,9 +1,9 @@
 .unity-label {
-    background-color: rgba(87, 12, 12, 255);
+    background-color: rgb(87, 12, 12);
 }
 
 .unity-list-view {
-    background-color: rgba(106, 101, 101, 255);
+    background-color: rgb(106, 101, 101);
 }
 
 .unity-button {

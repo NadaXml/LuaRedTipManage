@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
-    <ui:Label text="Label" name="LangKey">
+    <ui:Label text="LangName" name="T" style="height: auto; width: auto; top: auto; flex-direction: column; align-items: center; justify-content: flex-start;">
         <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/LangMatPresetDrawerUSS.uss" />
+        <ui:Label text="Label" name="LangKey" style="height: auto; width: auto; left: auto; flex-direction: column; align-items: center; opacity: 1; display: flex; top: auto; position: relative;" />
     </ui:Label>
     <uie:ObjectField label="Object Field" name="MatListPreset">
         <Style path="Assets/ThirdParty/TMPLangMat/Editor/LangMat/LangMatPresetDrawerUSS.uss" />
