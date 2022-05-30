@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <RedTipViewElem focusable="True" name="RedTipOV" style="flex-grow: 1;">
+        <Style path="Assets/RedTipGView/Editor/RedTipGView.uss" />
+    </RedTipViewElem>
+    <ui:Button text="Add" name="Create">
+        <Style path="Assets/RedTipGView/Editor/RedTipGView.uss" />
+    </ui:Button>
+    <ui:Button text="Remove" name="Remove">
+        <Style path="Assets/RedTipGView/Editor/RedTipGView.uss" />
+    </ui:Button>
+</ui:UXML>
